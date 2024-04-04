@@ -5,14 +5,14 @@ import styles from "./YouTube.module.css";
 export default function YouTube({ videoId }: { videoId: string }) {
   return (
     <div className={styles.container}>
-      <ReactYouTube
-        containerClassName={styles.sizer}
-        videoId={videoId}
-        opts={{
-          height: "100%",
-          width: "100%",
-        }}
-      />
+      <div className={styles.sizer}>
+        <ReactYouTube
+          videoId={videoId}
+          opts={{
+            width: '100%',
+          }}
+        />
+      </div>
     </div>
   );
 }
